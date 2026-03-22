@@ -1,0 +1,96 @@
+{{ if .Param "math" }}
+  {{ partialCached "math.html" . }}
+{{ end }}
+
+<style>
+  .logo {
+    position: fixed;
+    z-index: 1000;
+    left: 190px;
+  }
+  #menu {
+        margin-left: 700px; 
+        display: flex;
+    }
+  .header {
+          position: relative !important;
+      }
+
+  /* Compact TOC */
+  .toc {
+    padding: 0.45em;
+    margin-bottom: 14px;
+  }
+
+  .toc details summary {
+    margin-inline-start: 6px;
+    font-size: 0.9rem;
+  }
+
+  .toc .inner {
+    margin: 4px 10px;
+    padding: 0 6px;
+    font-size: 0.92rem;
+    line-height: 1.45;
+  }
+
+  .toc .inner ul,
+  .toc .inner ol {
+    margin: 0;
+    padding-inline-start: 1rem;
+    list-style-position: inside;
+  }
+
+  .toc .inner li > ul,
+  .toc .inner li > ol {
+    padding-inline-start: 1rem;
+  }
+
+  /* Search page styling */
+  .page-header h1 {
+    font-family: "Segoe UI Variable", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(2.2rem, 4vw, 3.1rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  #searchbox {
+    margin-top: 0.35rem;
+  }
+
+  #searchbox input {
+    font-family: "Segoe UI Variable", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.42rem 0.75rem;
+    border-width: 1.5px;
+    border-radius: 12px;
+  }
+
+  #searchResults li {
+    font-family: "Segoe UI Variable", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.97rem;
+    font-weight: 650;
+    padding: 11px 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    background: var(--entry);
+  }
+
+  #searchbox input::-webkit-search-cancel-button {
+    transform: scale(0.9);
+  }
+  .post-content {
+      /* Ưu tiên Inter, sau đó là các font hệ thống hiện đại */
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-size: 16px;
+      line-height: 1.6; /* Tăng khoảng cách dòng để đọc bài AI/Code không bị mỏi mắt */
+      letter-spacing: -0.01em; /* Thu hẹp khoảng cách chữ một chút cho hiện đại */
+  }
+
+  /* Làm cho các đoạn code OpenCV trông sắc nét hơn */
+  .post-content code {
+      font-family: "Fira Code", "Cascadia Code", monospace;
+      font-size: 0.9em;
+  } 
+</style>
